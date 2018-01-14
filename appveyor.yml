@@ -15,7 +15,7 @@ after_build:
 
     .\.packages\package-NBi-CosmosDb.ps1 $nuget_version
 test_script:
-- cmd: nunit-console-x86 NBi.Testing\bin\debug\NBi.Testing.CosmosDb.dll /exclude:Acceptance,Olap,Etl,WindowsService,ReportServerDB,LocalSQL
+- cmd: nunit-console-x86 NBi.Testing.Core.CosmosDb\bin\debug\NBi.Testing.Core.CosmosDb.dll
 artifacts:
 - path: NBi.Core.CosmosDb\bin\Debug
   name: NBi.CosmosDb
