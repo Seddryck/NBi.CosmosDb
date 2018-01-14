@@ -47,4 +47,4 @@ $content = $content -replace '\$depList\$',$depList
 
 $content | Out-File $root\NBi.CosmosDb.compiled.nuspec -Encoding UTF8
 
-& $root\..\.nuget\NuGet.exe pack $root\..\.packages\NBi.CosmosDb.compiled.nuspec -Version $version -OutputDirectory $root\..\.nupkg
+& NuGet.exe pack $root\..\.packages\NBi.CosmosDb.compiled.nuspec -Version $version -OutputDirectory $root\..\.nupkg
