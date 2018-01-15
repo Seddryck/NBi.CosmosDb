@@ -14,12 +14,14 @@
       </resultSet>
     </system-under-test>
     <assert>
-      <equalTo keys-names="id">
+      <equalTo values-default-type="text">
         <resultSet>
           <row>
-            <cell column-name="id">robin</cell>
-            <cell column-name="firstName">robin</cell>
-            <cell column-name="lastName">robin</cell>
+            <cell>robin</cell>
+            <cell>person</cell>
+            <cell>vertex</cell>
+            <cell>Robin</cell>
+            <cell>Wakefield</cell>
           </row>
         </resultSet>
       </equalTo>
