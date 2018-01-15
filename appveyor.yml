@@ -24,6 +24,8 @@ test_script:
 artifacts:
 - path: NBi.Core.CosmosDb\bin\Debug
   name: NBi.CosmosDb
+- path: .nupkg\NBi.CosmosDb.*.nupkg
+  name: NBi.CosmosDb
 deploy:
 - provider: NuGet
   api_key:
