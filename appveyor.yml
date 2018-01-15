@@ -18,7 +18,7 @@ after_build:
 
     .\.packages\package-NBi-CosmosDb.ps1 $nuget_version
 
-    testing-override-connectionString.ps1 $env:AzureGraphConnectionString
+    .\testing-override-connectionString.ps1 $env:AzureGraphConnectionString
 test_script:
 - cmd: nunit-console-x86 NBi.Testing.Core.CosmosDb\bin\debug\NBi.Testing.Core.CosmosDb.dll
 artifacts:
