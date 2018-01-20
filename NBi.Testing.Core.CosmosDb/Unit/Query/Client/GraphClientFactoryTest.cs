@@ -18,6 +18,13 @@ namespace NBi.Testing.Core.CosmosDb.Unit.Query.Client
         }
 
         [Test]
+        public void CanHandle_CosmosDbGraphWithApi_True()
+        {
+            var factory = new GraphClientFactory();
+            Assert.That(factory.CanHandle("Endpoint=https://xyz.graphs.azure.com:443;AuthKey=@uthk3y;database=db;collection=FoF;api=graph"), Is.True);
+        }
+
+        [Test]
         public void CanHandle_OleDbConnectionString_False()
         {
             var factory = new GraphClientFactory();

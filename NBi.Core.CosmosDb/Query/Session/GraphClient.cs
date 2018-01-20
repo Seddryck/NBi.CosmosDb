@@ -15,6 +15,8 @@ namespace NBi.Core.CosmosDb.Query.Client
         public const string AuthKeyToken = "authkey";
         public const string DatabaseToken = "database";
         public const string GraphToken = "graph";
+        public const string CollectionToken = "collection";
+        public const string ApiToken = "api";
 
         private readonly Uri endpoint;
 
