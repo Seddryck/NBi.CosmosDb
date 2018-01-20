@@ -3,7 +3,7 @@ $client = New-Object System.Net.Sockets.TcpClient([System.Net.Sockets.AddressFam
 
 do {
 	try {    
-		$client.Connect("127.0.0.1", 8082)
+		$client.Connect("127.0.0.1", 8081)
 		write-host "CosmosDB started"
 	}
 	
