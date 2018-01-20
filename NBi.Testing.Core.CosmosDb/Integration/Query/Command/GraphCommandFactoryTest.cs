@@ -45,7 +45,7 @@ namespace NBi.Testing.Core.CosmosDb.Integration.Query.Command
         [Test]
         public void Instantiate_NoParameter_CorrectResultSet()
         {
-            GraphClient conn = new GraphClientFactory().Instantiate(ConnectionStringReader.GetAzureGraph()) as GraphClient;
+            GraphClient conn = new GraphClientFactory().Instantiate(ConnectionStringReader.GetLocaleGraph()) as GraphClient;
             var query = Mock.Of<IQuery>(
                 x => x.Statement == "g.V()"
                 );

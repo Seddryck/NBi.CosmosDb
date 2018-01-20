@@ -17,6 +17,7 @@ namespace NBi.Testing.Core.CosmosDb
         }
 
 
+        public static string GetLocaleGraph() => Get("LocaleGraph");
         public static string GetAzureGraph() => Get("AzureGraph");
 
         private static string GetFilename()

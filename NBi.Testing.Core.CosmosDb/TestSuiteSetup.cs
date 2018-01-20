@@ -32,7 +32,7 @@ namespace NBi.Testing.Core.CosmosDb
         [SetUp]
         public void Init()
         {
-            var csBuilder = new DbConnectionStringBuilder() { ConnectionString = ConnectionStringReader.GetAzureGraph() };
+            var csBuilder = new DbConnectionStringBuilder() { ConnectionString = ConnectionStringReader.GetLocaleGraph() };
             var endpoint = new Uri(csBuilder["endpoint"].ToString());
             var authKey = csBuilder["authkey"].ToString();
             var databaseId = csBuilder["database"].ToString();
@@ -40,23 +40,45 @@ namespace NBi.Testing.Core.CosmosDb
 
             using (var client = new DocumentClient(endpoint, authKey))
             {
+                var databaseResponse = client.CreateDatabaseIfNotExistsAsync(new Database() { Id = databaseId }).Result;
+                switch (databaseResponse.StatusCode)
+                {
+                    case System.Net.HttpStatusCode.OK:
+                        Console.WriteLine($"Database {databaseId} already exists.");
+                        break;
+                    case System.Net.HttpStatusCode.Created:
+                        Console.WriteLine($"Database {databaseId} created.");
+                        break;
+                    default:
+                        throw new ArgumentException($"Can't create database {databaseId}: {databaseResponse.StatusCode}");
+                }
+
                 var databaseUri = UriFactory.CreateDatabaseUri(databaseId);
-                var database = client.ReadDatabaseAsync(databaseUri).Result;
+                var collectionResponse = client.CreateDocumentCollectionIfNotExistsAsync(databaseUri, new DocumentCollection() { Id = collectionId }).Result;
+                switch (collectionResponse.StatusCode)
+                {
+                    case System.Net.HttpStatusCode.OK:
+                        Console.WriteLine($"Collection {collectionId} already exists.");
+                        break;
+                    case System.Net.HttpStatusCode.Created:
+                        Console.WriteLine($"Database {collectionId} created.");
+                        break;
+                    default:
+                        throw new ArgumentException($"Can't create database {collectionId}: {collectionResponse.StatusCode}");
+                }
 
-                var collection = client.CreateDocumentCollectionIfNotExistsAsync(databaseUri, new DocumentCollection() { Id = collectionId }).Result;
-
-                var queryCheck = client.CreateGremlinQuery<dynamic>(collection, "g.V().Count()");
+                var queryCheck = client.CreateGremlinQuery<dynamic>(collectionResponse, "g.V().Count()");
                 var count = queryCheck.ExecuteNextAsync().Result.First();
 
                 if (count != 4)
                 {
                     foreach (var statement in Statements)
                     {
-                        var query = client.CreateGremlinQuery<dynamic>(collection, statement);
+                        var query = client.CreateGremlinQuery<dynamic>(collectionResponse, statement);
                         var feed = query.ExecuteNextAsync().Result;
-                        Console.WriteLine("Setup database: { statement }");
+                        Console.WriteLine($"Setup database: { statement }");
                     }
-                }
+                } 
             }
 
 

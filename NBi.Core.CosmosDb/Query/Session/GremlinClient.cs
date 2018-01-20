@@ -55,11 +55,8 @@ namespace NBi.Core.CosmosDb.Query.Client
 
         protected void Initialize()
         {
-            var getDatabaseTask = Task.Run(async () => await GetDatabaseAsync(Client, DatabaseId));
-            getDatabaseTask.Wait();
-
-            var getGraphTask = Task.Run(async () => await GetGraphAsync(Client, DatabaseId, GraphId));
-            Documents = getGraphTask.Result;
+            var db = GetDatabaseAsync(Client, DatabaseId).Result;
+            Documents = GetGraphAsync(Client, DatabaseId, GraphId).Result;
         }
 
         private async Task<Database> GetDatabaseAsync(DocumentClient client, string databaseid)
@@ -70,7 +67,7 @@ namespace NBi.Core.CosmosDb.Query.Client
             }
             catch (DocumentClientException documentClientException)
             {
-                if (documentClientException.Error?.Code == "NotFound")
+                if (documentClientException.StatusCode == System.Net.HttpStatusCode.NotFound)
                     throw new NBiException($"The database '{DatabaseId}' does not exist.");
                 else
                     throw;

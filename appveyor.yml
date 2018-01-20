@@ -5,6 +5,11 @@ environment:
     secure: H+W/cycdn/PV3Rs+Z+gD6TkPEVgaqZOgyJ6bsNOzypHYWh2GR04/FBA5A/F+dRxsi4u2Pp9lAj+KfjvlCJM4UW2OKjHU+bmcuKtroQ3sKOEUbh8ZxhTU6qH9NPR/bLPp3QGI+W9ncuOm4cibZmmvlXLMxxDrUkMBW2sM6ShO0Gqi71sPujONLxJW1Qy2OReRLycT1LBRkj3TcozCdD+OLzw0450hlRIVsC5k118YWPzppr89lCNV/VFc1abZ72ku
 init:
 - cmd: git config --global core.autocrlf true
+install:
+- ps: Start-FileDownload 'https://aka.ms/cosmosdb-emulator' -FileName 'c:\projects\cosmos-db.msi'
+- cmd: cmd /c start /wait msiexec /i "c:\projects\cosmos-db.msi" /qn /quiet /norestart /log install.log  
+- ps: Start-Process "start-emulator.cmd"
+- ps: .\wait-connect-cosmosdb.ps1
 before_build:
 - cmd: >-
     gitversion /l console /output buildserver /updateAssemblyInfo
