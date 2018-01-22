@@ -14,15 +14,15 @@ namespace NBi.Testing.Core.CosmosDb.Unit.Configuration.Extension
     public class ExtensionAnalyzerTest
     {
         [Test]
-        public void Execute_CosmosDbGraph_Three()
+        public void Execute_CosmosDb_Six()
         {
             var analyzer = new ExtensionAnalyzer();
             var types = analyzer.Execute("NBi.Core.CosmosDb");
-            Assert.That(types.Count(), Is.EqualTo(3));
+            Assert.That(types.Count(), Is.EqualTo(6));
         }
 
         [Test]
-        public void Execute_CosmosDbGraph_ISessionFactory()
+        public void Execute_GraphApi_IClientFactory()
         {
             var analyzer = new ExtensionAnalyzer();
             var types = analyzer.Execute("NBi.Core.CosmosDb");
@@ -30,7 +30,7 @@ namespace NBi.Testing.Core.CosmosDb.Unit.Configuration.Extension
         }
 
         [Test]
-        public void Execute_CosmosDbGraph_ICommandFactory()
+        public void Execute_GraphApi_ICommandFactory()
         {
             var analyzer = new ExtensionAnalyzer();
             var types = analyzer.Execute("NBi.Core.CosmosDb");
@@ -38,11 +38,36 @@ namespace NBi.Testing.Core.CosmosDb.Unit.Configuration.Extension
         }
 
         [Test]
-        public void Execute_CosmosDbGraph_IExecutionEngine()
+        public void Execute_GraphApi_IExecutionEngine()
         {
             var analyzer = new ExtensionAnalyzer();
             var types = analyzer.Execute("NBi.Core.CosmosDb");
             Assert.That(types, Has.Member(typeof(GraphExecutionEngine)));
+        }
+
+
+        [Test]
+        public void Execute_SqlApi_IClientFactory()
+        {
+            var analyzer = new ExtensionAnalyzer();
+            var types = analyzer.Execute("NBi.Core.CosmosDb");
+            Assert.That(types, Has.Member(typeof(SqlClientFactory)));
+        }
+
+        [Test]
+        public void Execute_SqlApi_ICommandFactory()
+        {
+            var analyzer = new ExtensionAnalyzer();
+            var types = analyzer.Execute("NBi.Core.CosmosDb");
+            Assert.That(types, Has.Member(typeof(SqlCommandFactory)));
+        }
+
+        [Test]
+        public void Execute_SqlApi_IExecutionEngine()
+        {
+            var analyzer = new ExtensionAnalyzer();
+            var types = analyzer.Execute("NBi.Core.CosmosDb");
+            Assert.That(types, Has.Member(typeof(SqlExecutionEngine)));
         }
     }
 }

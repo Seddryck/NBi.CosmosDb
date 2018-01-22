@@ -1,5 +1,5 @@
 ﻿using NUnit.Framework;
-using NBi.NUnit.Runtime.Runner;
+using NBi.Testing.Acceptance;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,6 +31,7 @@ namespace NBi.Testing.Core.CosmosDb.Acceptance
 
         [Test]
         [TestCase(@"Graph\ResultSetEqualToResultSet.nbits")]
+        [TestCase(@"Sql\ResultSetEqualToResultSet.nbits")]
         public override void RunPositiveTestSuiteWithConfig(string filename) => base.RunPositiveTestSuiteWithConfig(filename);
 
         public override void RunIgnoredTests(string filename) => throw new NotImplementedException();
