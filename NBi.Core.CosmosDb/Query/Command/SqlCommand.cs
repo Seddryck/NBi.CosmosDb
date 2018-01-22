@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace NBi.Core.CosmosDb.Query.Command
 {
-    class GraphCommand : BaseCommand
+    class SqlCommand : BaseCommand
     {
-        public GraphCommand(GraphClientOperation client, GraphCommandOperation command)
+        public SqlCommand(SqlClientOperation client, SqlCommandOperation command)
             : base(client, command)
         { }
     }

@@ -12,7 +12,7 @@ using Newtonsoft.Json.Linq;
 namespace NBi.Testing.Core.CosmosDb.Integration.Query.Command
 {
     [TestFixture]
-    public class GraphCommandFactoryTest
+    public class SqlCommandFactoryTest
     {
 
         #region SetUp & TearDown
@@ -45,16 +45,16 @@ namespace NBi.Testing.Core.CosmosDb.Integration.Query.Command
         [Test]
         public void Instantiate_NoParameter_CorrectResultSet()
         {
-            GraphClient client = new GraphClientFactory().Instantiate(ConnectionStringReader.GetLocaleGraph()) as GraphClient;
+            var client = new SqlClientFactory().Instantiate(ConnectionStringReader.GetLocaleSql()) as SqlClient;
             var query = Mock.Of<IQuery>(
-                x => x.Statement == "g.V()"
+                x => x.Statement == "SELECT * FROM FoF f WHERE f.label='person'"
                 );
-            var factory = new GraphCommandFactory();
-            var cosmosdbQuery = (factory.Instantiate(client, query).Implementation) as GraphCommandOperation;
-            var statement = cosmosdbQuery.Create();
+            var factory = new SqlCommandFactory();
+            var command = (factory.Instantiate(client, query).Implementation) as SqlCommandOperation;
+            var statement = command.Create();
 
-            var session = client.CreateClientOperation();
-            var results = session.Run(statement);
+            var clientOperation = client.CreateClientOperation();
+            var results = clientOperation.Run(statement);
             Assert.That(results.Count, Is.EqualTo(4));
         }
     }

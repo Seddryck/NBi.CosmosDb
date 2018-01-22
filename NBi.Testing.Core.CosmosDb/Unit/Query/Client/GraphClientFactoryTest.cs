@@ -32,7 +32,7 @@ namespace NBi.Testing.Core.CosmosDb.Unit.Query.Client
         }
 
         [Test]
-        public void Instantiate_CosmosDbGraph_GremlinSession()
+        public void Instantiate_CosmosDbGraph_GraphClient()
         {
             var factory = new GraphClientFactory();
             var session = factory.Instantiate("Endpoint=https://xyz.graphs.azure.com:443;AuthKey=@uthk3y;database=db;graph=FoF");

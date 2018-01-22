@@ -11,14 +11,14 @@ using System.Threading.Tasks;
 
 namespace NBi.Core.CosmosDb.Query.Client
 {
-    class GremlinClient
+    abstract class BaseClientOperation
     {
         public DocumentClient Client { get; }
         public string DatabaseId { get; }
-        public string GraphId { get; }
-        protected DocumentCollection Documents { get; private set; }
+        public string CollectionId { get; }
+        protected DocumentCollection Collection { get; private set; }
 
-        public GremlinClient(Uri endpoint, string authKey, string databaseId, string graphId)
+        public BaseClientOperation(Uri endpoint, string authKey, string databaseId, string graphId)
         {
             try
             { Client = new DocumentClient(endpoint, authKey); }
@@ -26,18 +26,13 @@ namespace NBi.Core.CosmosDb.Query.Client
             { throw new NBiException($"The connectionString for CosmosDb is expecting an AuthKey encoded in base64. The value '{authKey}' is not a base64-encoded.", ex); }
 
             DatabaseId = databaseId ?? throw new NBiException($"The connectionString for CosmosDb is expecting a databaseId and this value cannot be null or empty");
-            GraphId = graphId ?? throw new NBiException($"The connectionString for CosmosDb is expecting a graphId and this value cannot be null or empty");
+            CollectionId = graphId ?? throw new NBiException($"The connectionString for CosmosDb is expecting a collectionId and this value cannot be null or empty");
         }
 
-        public IDocumentQuery<dynamic> CreateCommand(string preparedStatement)
-        {
-            Initialize();
-            return Client.CreateGremlinQuery<dynamic>(Documents, preparedStatement);
-        }
 
         public dynamic[] Run(IDocumentQuery<dynamic> query)
         {
-            var result = Task.Run(async () => await GetAllResultsAsync(query)).Result;
+            var result = GetAllResultsAsync(query).Result;
             return result;
         }
 
@@ -53,10 +48,18 @@ namespace NBi.Core.CosmosDb.Query.Client
             return list.ToArray();
         }
 
+        public IDocumentQuery<dynamic> CreateCommand(string preparedStatement)
+        {
+            Initialize();
+            return OnCreateCommand(preparedStatement);
+        }
+
+        protected abstract IDocumentQuery<dynamic> OnCreateCommand(string preparedStatement);
+
         protected void Initialize()
         {
             var db = GetDatabaseAsync(Client, DatabaseId).Result;
-            Documents = GetGraphAsync(Client, DatabaseId, GraphId).Result;
+            Collection = GetCollectionAsync(Client, DatabaseId, CollectionId).Result;
         }
 
         private async Task<Database> GetDatabaseAsync(DocumentClient client, string databaseid)
@@ -75,18 +78,18 @@ namespace NBi.Core.CosmosDb.Query.Client
             throw new InvalidOperationException();
         }
 
-        private async Task<DocumentCollection> GetGraphAsync(DocumentClient client, string databaseid, string graphId)
+        private async Task<DocumentCollection> GetCollectionAsync(DocumentClient client, string databaseId, string collectionId)
         {
             try
             {
-                return await client.ReadDocumentCollectionAsync(UriFactory.CreateDocumentCollectionUri(DatabaseId, GraphId));
+                return await client.ReadDocumentCollectionAsync(UriFactory.CreateDocumentCollectionUri(databaseId, collectionId));
             }
             catch (DocumentClientException documentClientException)
             {
                 if (documentClientException.Error?.Code == "NotFound")
                 {
                     if (documentClientException.Error?.Code == "NotFound")
-                        throw new NBiException($"The collection/graph '{GraphId}' does not exist.");
+                        throw new NBiException($"The collection '{collectionId}' does not exist.");
                     else
                         throw;
                 }

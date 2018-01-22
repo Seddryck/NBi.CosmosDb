@@ -36,7 +36,7 @@ namespace NBi.Testing.Core.CosmosDb
             var endpoint = new Uri(csBuilder["endpoint"].ToString());
             var authKey = csBuilder["authkey"].ToString();
             var databaseId = csBuilder["database"].ToString();
-            var collectionId = csBuilder["graph"].ToString();
+            var collectionId = csBuilder["collection"].ToString();
 
             using (var client = new DocumentClient(endpoint, authKey))
             {

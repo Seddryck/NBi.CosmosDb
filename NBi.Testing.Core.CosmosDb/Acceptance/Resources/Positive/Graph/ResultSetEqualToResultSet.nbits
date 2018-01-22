@@ -2,8 +2,9 @@
 <testSuite name="Acceptance Testing: query equalTo ResultSet" xmlns="http://NBi/TestSuite">
   <settings>
     <default apply-to="system-under-test">
-      <connectionString>@AzureGraph</connectionString>
+      <connectionString>@LocaleGraph</connectionString>
     </default>
+    <parallelize-queries>false</parallelize-queries>
   </settings>
   <test name="Thomas' friends of friends" uid="0001">
     <system-under-test>

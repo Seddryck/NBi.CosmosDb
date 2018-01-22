@@ -10,19 +10,16 @@ using Microsoft.Azure.Graphs.Elements;
 
 namespace NBi.Core.CosmosDb.Query.Command
 {
-    class GremlinQuery
+    class BaseCommandOperation
     {
         public string PreparedStatement { get; }
-        public GremlinClient Session { get; }
-        public GremlinQuery(GremlinClient session, string preparedStatement)
+        public BaseClientOperation Client { get; }
+        public BaseCommandOperation(BaseClientOperation client, string preparedStatement)
         {
-            Session = session;
+            Client = client;
             PreparedStatement = preparedStatement;
         }
 
-        public IDocumentQuery<dynamic> Create()
-        {
-            return Session.CreateCommand(PreparedStatement);
-        }
+        public IDocumentQuery<dynamic> Create() => Client.CreateCommand(PreparedStatement);
     }
 }

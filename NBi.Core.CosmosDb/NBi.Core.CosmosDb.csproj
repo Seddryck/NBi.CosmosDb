@@ -207,13 +207,26 @@
       <Link>Properties\GlobalAssemblyInfo.cs</Link>
     </Compile>
     <Compile Include="Properties\ProjectAssemblyInfo.cs" />
-    <Compile Include="Query\Command\GremlinQuery.cs" />
+    <Compile Include="Query\Client\BaseClientOperation.cs" />
+    <Compile Include="Query\Client\BaseClientFactory.cs" />
+    <Compile Include="Query\Client\SqlClientFactory.cs" />
+    <Compile Include="Query\Client\SqlClientOperation.cs" />
+    <Compile Include="Query\Command\BaseCommand.cs" />
+    <Compile Include="Query\Command\BaseCommandOperation.cs" />
+    <Compile Include="Query\Command\BaseCommandFactory.cs" />
+    <Compile Include="Query\Command\SqlCommandOperation.cs" />
+    <Compile Include="Query\Command\SqlCommandFactory.cs" />
+    <Compile Include="Query\Command\SqlCommand.cs" />
+    <Compile Include="Query\Command\GraphCommandOperation.cs" />
     <Compile Include="Query\Command\GraphCommand.cs" />
     <Compile Include="Query\Command\GraphCommandFactory.cs" />
-    <Compile Include="Query\Session\GremlinClient.cs" />
-    <Compile Include="Query\Session\GraphClientFactory.cs" />
-    <Compile Include="Query\Session\GraphClient.cs" />
+    <Compile Include="Query\Client\BaseClient.cs" />
+    <Compile Include="Query\Client\GraphClientOperation.cs" />
+    <Compile Include="Query\Client\GraphClientFactory.cs" />
+    <Compile Include="Query\Client\GraphClient.cs" />
+    <Compile Include="Query\Execution\SqlExecutionEngine.cs" />
     <Compile Include="Query\Execution\GraphExecutionEngine.cs" />
+    <Compile Include="Query\Client\SqlClient.cs" />
   </ItemGroup>
   <ItemGroup>
     <Analyzer Include="..\packages\Microsoft.CodeAnalysis.Analyzers.1.1.0\analyzers\dotnet\cs\Microsoft.CodeAnalysis.Analyzers.dll" />

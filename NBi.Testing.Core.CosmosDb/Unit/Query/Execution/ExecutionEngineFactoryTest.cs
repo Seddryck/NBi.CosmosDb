@@ -20,7 +20,7 @@ namespace NBi.Testing.Core.CosmosDb.Unit.Query.Execution
     {
         private string base64AuthKey = Convert.ToBase64String(Encoding.UTF8.GetBytes("@uthK3y"));
 
-        private class GremlinConfig : IExtensionsConfiguration
+        private class GraphConfig : IExtensionsConfiguration
         {
             public IReadOnlyCollection<Type> Extensions => new List<Type>()
             {
@@ -31,22 +31,51 @@ namespace NBi.Testing.Core.CosmosDb.Unit.Query.Execution
         }
 
         [Test]
-        public void Instantiate_GremlinConnectionString_GremlinExecutionEngine()
+        public void Instantiate_GraphConnectionString_GraphExecutionEngine()
         {
-            var config = new GremlinConfig();
-            var sessionProvider = new ClientProvider(config);
+            var config = new GraphConfig();
+            var clientProvider = new ClientProvider(config);
             var commandProvider = new CommandProvider(config);
-            var factory = new ExecutionEngineFactory(sessionProvider, commandProvider, config);
+            var factory = new ExecutionEngineFactory(clientProvider, commandProvider, config);
 
             var query = Mock.Of<IQuery>
                 (
-                    x => x.ConnectionString == $"Endpoint=https://xyz.graphs.azure.com:443;AuthKey={base64AuthKey};database=db;graph=FoF"
+                    x => x.ConnectionString == $"Endpoint=https://xyz.documents.azure.com:443;AuthKey={base64AuthKey};database=db;graph=FoF"
                     && x.Statement == "g.V().Count()"
                 );
 
             var engine = factory.Instantiate(query);
             Assert.That(engine, Is.Not.Null);
             Assert.That(engine, Is.TypeOf<GraphExecutionEngine>());
+        }
+
+        private class SqlConfig : IExtensionsConfiguration
+        {
+            public IReadOnlyCollection<Type> Extensions => new List<Type>()
+            {
+                typeof(SqlClientFactory),
+                typeof(SqlCommandFactory),
+                typeof(SqlExecutionEngine),
+            };
+        }
+
+        [Test]
+        public void Instantiate_SqlConnectionString_SqlExecutionEngine()
+        {
+            var config = new SqlConfig();
+            var clientProvider = new ClientProvider(config);
+            var commandProvider = new CommandProvider(config);
+            var factory = new ExecutionEngineFactory(clientProvider, commandProvider, config);
+
+            var query = Mock.Of<IQuery>
+                (
+                    x => x.ConnectionString == $"Endpoint=https://xyz.documents.azure.com:443;AuthKey={base64AuthKey};database=db;collection=FoF;api=sql"
+                    && x.Statement == "SELECT * FROM Families f WHERE f.id = \"WakefieldFamily\""
+                );
+
+            var engine = factory.Instantiate(query);
+            Assert.That(engine, Is.Not.Null);
+            Assert.That(engine, Is.TypeOf<SqlExecutionEngine>());
         }
     }
 }

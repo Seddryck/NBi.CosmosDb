@@ -16,9 +16,12 @@ namespace NBi.Testing.Core.CosmosDb
             throw new Exception();
         }
 
+        private static string Get(string name, string api) => $"{Get(name)};api={api}";
 
-        public static string GetLocaleGraph() => Get("LocaleGraph");
-        public static string GetAzureGraph() => Get("AzureGraph");
+        public static string GetLocaleGraph() => Get("LocaleDB", "graph");
+        public static string GetAzureGraph() => Get("AzureDB", "graph");
+        public static string GetLocaleSql() => Get("LocaleDB", "sql");
+        public static string GetAzureSql() => Get("AzureDB", "sql");
 
         private static string GetFilename()
         {
@@ -29,6 +32,8 @@ namespace NBi.Testing.Core.CosmosDb
                 return "ConnectionString.config";
             return "";
         }
+
+        
 
 
     }

@@ -20,15 +20,15 @@ using System.Threading.Tasks;
 
 namespace NBi.Core.CosmosDb.Query.Execution
 {
-    [SupportedCommandType(typeof(GraphCommandOperation))]
-    internal class GraphExecutionEngine : IExecutionEngine
+    [SupportedCommandType(typeof(SqlCommandOperation))]
+    internal class SqlExecutionEngine : IExecutionEngine
     {
-        protected GraphCommandOperation Command { get; }
-        protected GraphClientOperation Client { get; }
+        protected SqlCommandOperation Command { get; }
+        protected SqlClientOperation Client { get; }
 
         private readonly Stopwatch stopWatch = new Stopwatch();
 
-        protected internal GraphExecutionEngine(GraphClientOperation client, GraphCommandOperation command)
+        protected internal SqlExecutionEngine(SqlClientOperation client, SqlCommandOperation command)
         {
             Client = client;
             Command = command;
@@ -114,20 +114,17 @@ namespace NBi.Core.CosmosDb.Query.Execution
             var query = Command.Create();
             object result = null;
             StartWatch();
-            Task.Run(async () =>
-            {
-                result = await OnExecuteScalar(query);
-            }).GetAwaiter().GetResult();
+            result = OnExecuteScalar(query);
             StopWatch();
             return result;
         }
 
-        public async Task<object> OnExecuteScalar(IDocumentQuery<dynamic> query)
+        public object OnExecuteScalar(IDocumentQuery<dynamic> query)
         {
             if (query.HasMoreResults)
             {
-                var buffer = await query.ExecuteNextAsync();
-                var obj = buffer.FirstOrDefault();
+                var buffer = query.ExecuteNextAsync().Result;
+                var obj = buffer.FirstOrDefault()?.Value;
                 return obj;
             }
             return null;
@@ -153,7 +150,7 @@ namespace NBi.Core.CosmosDb.Query.Execution
             {
                 var buffer = await query.ExecuteNextAsync();
                 foreach (var obj in buffer)
-                    list.Add(obj);
+                    list.Add(obj.Value);
             }
             return list;
         }
@@ -166,7 +163,7 @@ namespace NBi.Core.CosmosDb.Query.Execution
         protected void StopWatch()
         {
             stopWatch.Stop();
-            Trace.WriteLineIf(NBiTraceSwitch.TraceInfo, $"Time needed to execute query [Cosmos DB/Graph API]: {stopWatch.Elapsed:d'.'hh':'mm':'ss'.'fff'ms'}");
+            Trace.WriteLineIf(NBiTraceSwitch.TraceInfo, $"Time needed to execute query [Cosmos DB/SQL API]: {stopWatch.Elapsed:d'.'hh':'mm':'ss'.'fff'ms'}");
         }
 
         protected internal TimeSpan Elapsed { get => stopWatch.Elapsed; }

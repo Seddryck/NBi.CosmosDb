@@ -23,12 +23,14 @@ namespace NBi.Testing.Core.CosmosDb.Acceptance
         {
             var fileName = "ConnectionString.user.config";
             if (System.IO.File.Exists(fileName))
-                System.IO.File.Copy(fileName, $@"Acceptance\Resources\Positive\{fileName}", true);
+                foreach (var subdirectory in new[] { "Graph", "Sql" })
+                    if (System.IO.Directory.Exists($@"Acceptance\Resources\Positive\{subdirectory}"))
+                        System.IO.File.Copy(fileName, $@"Acceptance\Resources\Positive\{subdirectory}\{fileName}", true);
         }
 
 
         [Test]
-        [TestCase("ResultSetEqualToResultSet.nbits")]
+        [TestCase(@"Graph\ResultSetEqualToResultSet.nbits")]
         public override void RunPositiveTestSuiteWithConfig(string filename) => base.RunPositiveTestSuiteWithConfig(filename);
 
         public override void RunIgnoredTests(string filename) => throw new NotImplementedException();

@@ -38,25 +38,31 @@
     </Compile>
     <Compile Include="Acceptance\CosmosDbRuntimeOverrider.cs" />
     <Compile Include="ConnectionStringReader.cs" />
+    <Compile Include="Integration\NativeApi.cs" />
+    <Compile Include="Integration\Query\Command\SqlCommandFactoryTest.cs" />
     <Compile Include="Integration\Query\Command\GraphCommandFactoryTest.cs" />
+    <Compile Include="Integration\Query\Execution\SqlExecutionEngineTest.cs" />
     <Compile Include="Integration\Query\Execution\GraphExecutionEngineTest.cs" />
     <Compile Include="Properties\ProjectAssemblyInfo.cs" />
     <Compile Include="TestSuiteSetup.cs" />
     <Compile Include="Unit\Configuration\Extension\ExtensionAnalyzerTest.cs" />
+    <Compile Include="Unit\Query\Client\SqlClientFactoryTest.cs" />
+    <Compile Include="Unit\Query\Client\SqlClientTest.cs" />
+    <Compile Include="Unit\Query\Command\SqlCommandFactoryTest.cs" />
     <Compile Include="Unit\Query\Command\GraphCommandFactoryTest.cs" />
     <Compile Include="Unit\Query\Execution\ExecutionEngineFactoryTest.cs" />
     <Compile Include="Unit\Query\Client\GraphClientTest.cs" />
     <Compile Include="Unit\Query\Client\GraphClientFactoryTest.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Acceptance\Resources\Positive\ResultSetEqualToResultSet.nbits">
+    <EmbeddedResource Include="Acceptance\Resources\Positive\Graph\ResultSetEqualToResultSet.nbits">
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
-    <None Include="Acceptance\Resources\Positive\ResultSetEqualToResultSet.nbits.config">
+    <EmbeddedResource Include="Acceptance\Resources\Positive\Graph\ResultSetEqualToResultSet.nbits.config">
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+    </EmbeddedResource>
     <None Include="app.config" />
     <None Include="ConnectionString.AppVeyor.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
