@@ -9,7 +9,6 @@ install:
 - ps: Start-FileDownload 'https://aka.ms/cosmosdb-emulator' -FileName 'c:\projects\cosmos-db.msi'
 - cmd: cmd /c start /wait msiexec /i "c:\projects\cosmos-db.msi" /qn /quiet /norestart /log install.log  
 - ps: Start-Process "start-emulator.cmd"
-- ps: .\wait-connect-cosmosdb.ps1
 before_build:
 - cmd: >-
     gitversion /l console /output buildserver /updateAssemblyInfo
@@ -25,6 +24,7 @@ after_build:
 
     .\testing-override-connectionString.ps1 $env:AzureGraphConnectionString
 test_script:
+- ps: .\wait-connect-cosmosdb.ps1
 - cmd: nunit-console-x86 NBi.Testing.Core.CosmosDb\bin\debug\NBi.Testing.Core.CosmosDb.dll
 artifacts:
 - path: NBi.Core.CosmosDb\bin\Debug
