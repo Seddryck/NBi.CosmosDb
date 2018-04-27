@@ -1,7 +1,14 @@
 version: build.{build}
 image: Visual Studio 2017
+environment:
+  AzureGraphConnectionString:
+    secure: H+W/cycdn/PV3Rs+Z+gD6TkPEVgaqZOgyJ6bsNOzypHYWh2GR04/FBA5A/F+dRxsi4u2Pp9lAj+KfjvlCJM4UW2OKjHU+bmcuKtroQ3sKOEUbh8ZxhTU6qH9NPR/bLPp3QGI+W9ncuOm4cibZmmvlXLMxxDrUkMBW2sM6ShO0Gqi71sPujONLxJW1Qy2OReRLycT1LBRkj3TcozCdD+OLzw0450hlRIVsC5k118YWPzppr89lCNV/VFc1abZ72ku
 init:
 - cmd: git config --global core.autocrlf true
+install:
+- ps: Start-FileDownload 'https://aka.ms/cosmosdb-emulator' -FileName 'c:\projects\cosmos-db.msi'
+- cmd: cmd /c start /wait msiexec /i "c:\projects\cosmos-db.msi" /qn /quiet /norestart /log install.log  
+- ps: Start-Process "start-emulator.cmd"
 before_build:
 - cmd: >-
     gitversion /l console /output buildserver /updateAssemblyInfo
@@ -14,17 +21,22 @@ after_build:
     $nuget_version = "$env:GitVersion_NuGetVersionV2"
 
     .\.packages\package-NBi-CosmosDb.ps1 $nuget_version
+
+    .\testing-override-connectionString.ps1 $env:AzureGraphConnectionString
 test_script:
-- cmd: nunit-console-x86 NBi.Testing\bin\debug\NBi.Testing.CosmosDb.dll /exclude:Acceptance,Olap,Etl,WindowsService,ReportServerDB,LocalSQL
+- ps: .\wait-connect-cosmosdb.ps1
+- cmd: nunit-console-x86 NBi.Testing.Core.CosmosDb\bin\debug\NBi.Testing.Core.CosmosDb.dll
 artifacts:
 - path: NBi.Core.CosmosDb\bin\Debug
+  name: NBi.CosmosDb
+- path: .nupkg\NBi.CosmosDb.*.nupkg
   name: NBi.CosmosDb
 deploy:
 - provider: NuGet
   api_key:
     secure: 7LDAnpfRuEmLf/4hhERYnfy3tHLBqC7wqScUEviYVYkNvrM7C3NN0h73se3QuoNh
   on:
-    branch: develop
+    branch: /^(develop|release\/.+)$/
 - provider: NuGet
   api_key:
     secure: 7LDAnpfRuEmLf/4hhERYnfy3tHLBqC7wqScUEviYVYkNvrM7C3NN0h73se3QuoNh

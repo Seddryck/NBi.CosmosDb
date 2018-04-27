@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<testSuite name="Acceptance Testing for SQL API: query equalTo ResultSet" xmlns="http://NBi/TestSuite">
+  <settings>
+    <default apply-to="system-under-test">
+      <connectionString>@LocaleSql</connectionString>
+    </default>
+  </settings>
+  <test name="Thomas' information" uid="0001">
+    <system-under-test>
+      <resultSet>
+        <query>
+          SELECT f.id, f.label, f.firstName[0]._value as FirstName, f.lastName[0]._value as LastName FROM FoF f WHERE f.label='person' and f.id='robin'
+        </query>
+      </resultSet>
+    </system-under-test>
+    <assert>
+      <equalTo values-default-type="text">
+        <resultSet>
+          <row>
+            <cell>robin</cell>
+            <cell>person</cell>
+            <cell>Robin</cell>
+            <cell>Wakefield</cell>
+          </row>
+        </resultSet>
+      </equalTo>
+    </assert>
+  </test>
+  <test name="All of them are older than 20" uid="0002">
+    <system-under-test>
+      <resultSet>
+        <query>
+          SELECT f.firstName[0]._value as FirstName, f.age[0]._value as Age FROM FoF f WHERE f.label='person'
+        </query>
+      </resultSet>
+    </system-under-test>
+    <assert>
+      <all-rows>
+        <!-- TODO: Waiting bug fix #345 at https://github.com/Seddryck/NBi/issues/345 -->
+        <!--<combination operator="or">
+          <predicate operand="Age">
+            <null/>
+          </predicate>
+          <predicate operand="Age">
+            <more-than>20</more-than>
+          </predicate>
+        </combination>-->
+        <predicate operand="FirstName" type="text">
+          <matches-regex>^([A-Z][a-z]+)$</matches-regex>
+        </predicate>
+      </all-rows>
+    </assert>
+  </test>
+  <test name="Count of person's lastnames" uid="0003">
+    <system-under-test>
+      <resultSet>
+        <query>
+          SELECT f.firstName[0]._value as FirstName, ARRAY_LENGTH(f.lastName) ?? 0 as LastNameCount FROM FoF f WHERE f.label='person'
+        </query>
+      </resultSet>
+    </system-under-test>
+    <assert>
+      <equalTo>
+        <resultSet>
+          <row>
+            <cell>Mary</cell>
+            <cell>1</cell>
+          </row>
+          <row>
+            <cell>Robin</cell>
+            <cell>1</cell>
+          </row>
+          <row>
+            <cell>Ben</cell>
+            <cell>1</cell>
+          </row>
+          <row>
+            <cell>Thomas</cell>
+            <cell>0</cell>
+          </row>
+        </resultSet>
+      </equalTo>
+    </assert>
+  </test>
+  
+</testSuite>
