@@ -4,8 +4,7 @@ using Microsoft.Azure.Documents.Linq;
 using Microsoft.Azure.Graphs.Elements;
 using NBi.Core.CosmosDb.Query.Command;
 using NBi.Core.CosmosDb.Query.Client;
-using NBi.Core.Query;
-using NBi.Core.Query.Execution;
+using NBi.Extensibility.Query;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
@@ -17,6 +16,7 @@ using System.Linq.Expressions;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
+using NBi.Extensibility;
 
 namespace NBi.Core.CosmosDb.Query.Execution
 {

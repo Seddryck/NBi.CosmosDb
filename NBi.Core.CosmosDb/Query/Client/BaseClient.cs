@@ -6,10 +6,11 @@ using System.Data.Common;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using NBi.Extensibility.Query;
 
 namespace NBi.Core.CosmosDb.Query.Client
 {
-    abstract class BaseClient : NBi.Core.Query.Client.IClient
+    abstract class BaseClient : IClient
     {
         public const string EndpointToken = "endpoint";
         public const string AuthKeyToken = "authkey";

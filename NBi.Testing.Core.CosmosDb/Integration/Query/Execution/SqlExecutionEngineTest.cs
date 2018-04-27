@@ -8,6 +8,7 @@ using NBi.Core.CosmosDb.Query.Client;
 using NBi.Core.CosmosDb.Query.Command;
 using NBi.Core.CosmosDb.Query.Execution;
 using Moq;
+using NBi.Extensibility.Query;
 
 namespace NBi.Testing.Core.CosmosDb.Integration.Query.Execution
 {

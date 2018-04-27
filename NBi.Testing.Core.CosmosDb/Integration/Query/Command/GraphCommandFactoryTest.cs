@@ -1,13 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using NBi.Core.Query;
 using NUnit.Framework;
 using Moq;
 using NBi.Core.CosmosDb.Query.Client;
 using NBi.Core.CosmosDb.Query.Command;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
+using NBi.Extensibility.Query;
 
 namespace NBi.Testing.Core.CosmosDb.Integration.Query.Command
 {
@@ -50,7 +48,7 @@ namespace NBi.Testing.Core.CosmosDb.Integration.Query.Command
                 x => x.Statement == "g.V()"
                 );
             var factory = new GraphCommandFactory();
-            var cosmosdbQuery = (factory.Instantiate(client, query).Implementation) as GraphCommandOperation;
+            var cosmosdbQuery = (factory.Instantiate(client, query, null).Implementation) as GraphCommandOperation;
             var statement = cosmosdbQuery.Create();
 
             var session = client.CreateClientOperation();

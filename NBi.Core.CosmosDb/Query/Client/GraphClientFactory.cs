@@ -1,10 +1,10 @@
-﻿using NBi.Core.Query.Client;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data.Common;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using NBi.Extensibility.Query;
 
 namespace NBi.Core.CosmosDb.Query.Client
 {

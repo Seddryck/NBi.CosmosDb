@@ -23,10 +23,10 @@ namespace NBi.Core.CosmosDb.Query.Client
             try
             { Client = new DocumentClient(endpoint, authKey); }
             catch (FormatException ex)
-            { throw new NBiException($"The connectionString for CosmosDb is expecting an AuthKey encoded in base64. The value '{authKey}' is not a base64-encoded.", ex); }
+            { throw new Exception($"The connectionString for CosmosDb is expecting an AuthKey encoded in base64. The value '{authKey}' is not a base64-encoded.", ex); }
 
-            DatabaseId = databaseId ?? throw new NBiException($"The connectionString for CosmosDb is expecting a databaseId and this value cannot be null or empty");
-            CollectionId = graphId ?? throw new NBiException($"The connectionString for CosmosDb is expecting a collectionId and this value cannot be null or empty");
+            DatabaseId = databaseId ?? throw new Exception($"The connectionString for CosmosDb is expecting a databaseId and this value cannot be null or empty");
+            CollectionId = graphId ?? throw new Exception($"The connectionString for CosmosDb is expecting a collectionId and this value cannot be null or empty");
         }
 
 
@@ -71,7 +71,7 @@ namespace NBi.Core.CosmosDb.Query.Client
             catch (DocumentClientException documentClientException)
             {
                 if (documentClientException.StatusCode == System.Net.HttpStatusCode.NotFound)
-                    throw new NBiException($"The database '{DatabaseId}' does not exist.");
+                    throw new Exception($"The database '{DatabaseId}' does not exist.");
                 else
                     throw;
             }
@@ -89,7 +89,7 @@ namespace NBi.Core.CosmosDb.Query.Client
                 if (documentClientException.Error?.Code == "NotFound")
                 {
                     if (documentClientException.Error?.Code == "NotFound")
-                        throw new NBiException($"The collection '{collectionId}' does not exist.");
+                        throw new Exception($"The collection '{collectionId}' does not exist.");
                     else
                         throw;
                 }

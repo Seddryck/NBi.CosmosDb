@@ -8,6 +8,7 @@ using NBi.Core.CosmosDb.Query.Client;
 using NBi.Core.CosmosDb.Query.Command;
 using NBi.Core.CosmosDb.Query.Execution;
 using Moq;
+using NBi.Extensibility.Query;
 
 namespace NBi.Testing.Core.CosmosDb.Integration.Query.Execution
 {
@@ -47,7 +48,7 @@ namespace NBi.Testing.Core.CosmosDb.Integration.Query.Execution
         {
             GraphClient session = new GraphClientFactory().Instantiate(ConnectionStringReader.GetLocaleGraph()) as GraphClient;
             var statement = Mock.Of<IQuery>(x => x.Statement == "g.V()");
-            GraphCommandOperation cosmosdbQuery = new GraphCommandFactory().Instantiate(session, statement).Implementation as GraphCommandOperation;
+            GraphCommandOperation cosmosdbQuery = new GraphCommandFactory().Instantiate(session, statement, null).Implementation as GraphCommandOperation;
 
             var engine = new GraphExecutionEngine(session.CreateClientOperation(), cosmosdbQuery);
 
@@ -92,7 +93,7 @@ namespace NBi.Testing.Core.CosmosDb.Integration.Query.Execution
         {
             GraphClient session = new GraphClientFactory().Instantiate(ConnectionStringReader.GetLocaleGraph()) as GraphClient;
             var statement = Mock.Of<IQuery>(x => x.Statement == "g.E()");
-            GraphCommandOperation cosmosdbQuery = new GraphCommandFactory().Instantiate(session, statement).Implementation as GraphCommandOperation;
+            GraphCommandOperation cosmosdbQuery = new GraphCommandFactory().Instantiate(session, statement, null).Implementation as GraphCommandOperation;
 
             var engine = new GraphExecutionEngine(session.CreateClientOperation(), cosmosdbQuery);
 
@@ -176,7 +177,7 @@ namespace NBi.Testing.Core.CosmosDb.Integration.Query.Execution
         {
             GraphClient session = new GraphClientFactory().Instantiate(ConnectionStringReader.GetLocaleGraph()) as GraphClient;
             var statement = Mock.Of<IQuery>(x => x.Statement == "g.V().Count()");
-            GraphCommandOperation cosmosdbQuery = new GraphCommandFactory().Instantiate(session, statement).Implementation as GraphCommandOperation;
+            GraphCommandOperation cosmosdbQuery = new GraphCommandFactory().Instantiate(session, statement, null).Implementation as GraphCommandOperation;
 
             var engine = new GraphExecutionEngine(session.CreateClientOperation(), cosmosdbQuery);
 
@@ -189,7 +190,7 @@ namespace NBi.Testing.Core.CosmosDb.Integration.Query.Execution
         {
             GraphClient session = new GraphClientFactory().Instantiate(ConnectionStringReader.GetLocaleGraph()) as GraphClient;
             var statement = Mock.Of<IQuery>(x => x.Statement == "g.V('mary').values('lastName')");
-            GraphCommandOperation cosmosdbQuery = new GraphCommandFactory().Instantiate(session, statement).Implementation as GraphCommandOperation;
+            GraphCommandOperation cosmosdbQuery = new GraphCommandFactory().Instantiate(session, statement, null).Implementation as GraphCommandOperation;
 
             var engine = new GraphExecutionEngine(session.CreateClientOperation(), cosmosdbQuery);
 
@@ -202,7 +203,7 @@ namespace NBi.Testing.Core.CosmosDb.Integration.Query.Execution
         {
             GraphClient client = new GraphClientFactory().Instantiate(ConnectionStringReader.GetLocaleGraph()) as GraphClient;
             var statement = Mock.Of<IQuery>(x => x.Statement == "g.V('thomas').values('lastName')");
-            GraphCommandOperation commandOperation = new GraphCommandFactory().Instantiate(client, statement).Implementation as GraphCommandOperation;
+            GraphCommandOperation commandOperation = new GraphCommandFactory().Instantiate(client, statement, null).Implementation as GraphCommandOperation;
 
             var engine = new GraphExecutionEngine(client.CreateClientOperation(), commandOperation);
 
@@ -215,7 +216,7 @@ namespace NBi.Testing.Core.CosmosDb.Integration.Query.Execution
         {
             GraphClient session = new GraphClientFactory().Instantiate(ConnectionStringReader.GetLocaleGraph()) as GraphClient;
             var statement = Mock.Of<IQuery>(x => x.Statement == "g.V().values('lastName')");
-            GraphCommandOperation cosmosdbQuery = new GraphCommandFactory().Instantiate(session, statement).Implementation as GraphCommandOperation;
+            GraphCommandOperation cosmosdbQuery = new GraphCommandFactory().Instantiate(session, statement, null).Implementation as GraphCommandOperation;
 
             var engine = new GraphExecutionEngine(session.CreateClientOperation(), cosmosdbQuery);
 

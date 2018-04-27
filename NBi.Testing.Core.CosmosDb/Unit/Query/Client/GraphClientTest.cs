@@ -36,7 +36,7 @@ namespace NBi.Testing.Core.CosmosDb.Unit.Query.Client
         {
             var factory = new GraphClientFactory();
             var session = factory.Instantiate($"Endpoint=https://xyz.graphs.azure.com:443;AuthKey=@uthK3y;database=db;graph=FoF");
-            Assert.Throws<NBiException>( () => session.CreateNew());
+            Assert.Throws<Exception>( () => session.CreateNew());
         }
     }
 }

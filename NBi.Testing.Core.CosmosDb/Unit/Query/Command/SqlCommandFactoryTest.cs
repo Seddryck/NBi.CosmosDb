@@ -1,7 +1,4 @@
-﻿using NBi.Core.Query;
-using NBi.Core.Query.Command;
-using NBi.Core.Query.Client;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +7,7 @@ using NUnit.Framework;
 using Moq;
 using NBi.Core.CosmosDb.Query.Client;
 using NBi.Core.CosmosDb.Query.Command;
-using Microsoft.Azure.Documents.Linq;
+using NBi.Extensibility.Query;
 
 namespace NBi.Testing.Core.CosmosDb.Query.Command
 {

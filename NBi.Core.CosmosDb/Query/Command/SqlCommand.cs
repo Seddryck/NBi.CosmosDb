@@ -1,6 +1,6 @@
 ﻿using Microsoft.Azure.Documents.Linq;
 using NBi.Core.CosmosDb.Query.Client;
-using NBi.Core.Query.Command;
+using NBi.Extensibility.Query;
 using System;
 using System.Collections.Generic;
 using System.Linq;

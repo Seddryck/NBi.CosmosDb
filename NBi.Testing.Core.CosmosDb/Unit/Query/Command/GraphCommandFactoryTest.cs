@@ -11,6 +11,7 @@ using Moq;
 using NBi.Core.CosmosDb.Query.Client;
 using NBi.Core.CosmosDb.Query.Command;
 using Microsoft.Azure.Documents.Linq;
+using NBi.Extensibility.Query;
 
 namespace NBi.Testing.Core.CosmosDb.Query.Command
 {
@@ -30,7 +31,7 @@ namespace NBi.Testing.Core.CosmosDb.Query.Command
         [Test]
         public void CanHandle_OtherKindOfClient_False()
         {
-            var client = Mock.Of<NBiClient.IClient>();
+            var client = Mock.Of<IClient>();
             var query = Mock.Of<IQuery>();
             var factory = new GraphCommandFactory();
             Assert.That(factory.CanHandle(client), Is.False);
