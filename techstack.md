@@ -1,7 +1,8 @@
 <!--
---- Readme.md Snippet without images Start ---
+&lt;--- Readme.md Snippet without images Start ---&gt;
 ## Tech Stack
 Seddryck/NBi.CosmosDb is built on the following main stack:
+
 - [Microsoft Azure](https://azure.microsoft.com/en-us/) – Cloud Hosting
 - [.NET](http://www.microsoft.com/net/) – Frameworks (Full Stack)
 - [C#](http://csharp.net) – Languages
@@ -15,11 +16,13 @@ Seddryck/NBi.CosmosDb is built on the following main stack:
 - [Roslyn](https://github.com/dotnet/roslyn) – Code Review
 
 Full tech stack [here](/techstack.md)
---- Readme.md Snippet without images End ---
 
---- Readme.md Snippet with images Start ---
+&lt;--- Readme.md Snippet without images End ---&gt;
+
+&lt;--- Readme.md Snippet with images Start ---&gt;
 ## Tech Stack
 Seddryck/NBi.CosmosDb is built on the following main stack:
+
 - <img width='25' height='25' src='https://img.stackshare.io/service/213/default_88defae415fcb9cd0ac5d36c1ed27e74133c6287.jpg' alt='Microsoft Azure'/> [Microsoft Azure](https://azure.microsoft.com/en-us/) – Cloud Hosting
 - <img width='25' height='25' src='https://img.stackshare.io/service/1014/IoPy1dce_400x400.png' alt='.NET'/> [.NET](http://www.microsoft.com/net/) – Frameworks (Full Stack)
 - <img width='25' height='25' src='https://img.stackshare.io/service/1015/1200px-C_Sharp_wordmark.svg.png' alt='C#'/> [C#](http://csharp.net) – Languages
@@ -33,14 +36,15 @@ Seddryck/NBi.CosmosDb is built on the following main stack:
 - <img width='25' height='25' src='https://img.stackshare.io/service/20930/default_275fb27c037c57f3394917ebca90dc2465c97ed8.png' alt='Roslyn'/> [Roslyn](https://github.com/dotnet/roslyn) – Code Review
 
 Full tech stack [here](/techstack.md)
---- Readme.md Snippet with images End ---
+
+&lt;--- Readme.md Snippet with images End ---&gt;
 -->
 <div align="center">
 
 # Tech Stack File
 ![](https://img.stackshare.io/repo.svg "repo") [Seddryck/NBi.CosmosDb](https://github.com/Seddryck/NBi.CosmosDb)![](https://img.stackshare.io/public_badge.svg "public")
 <br/><br/>
-|64<br/>Tools used|11/12/23 <br/>Report generated|
+|64<br/>Tools used|01/05/24 <br/>Report generated|
 |------|------|
 </div>
 
@@ -187,7 +191,7 @@ Full tech stack [here](/techstack.md)
 |[Microsoft.CodeAnalysis.CSharp](https://www.nuget.org/Microsoft.CodeAnalysis.CSharp)|v1.3.0|04/27/18|Cédric L. Charlier |MIT|N/A|
 |[Microsoft.CodeAnalysis.Common](https://www.nuget.org/Microsoft.CodeAnalysis.Common)|v1.3.0|04/27/18|Cédric L. Charlier |MIT|N/A|
 |[Microsoft.SqlServer.SqlManagementObjects](https://www.nuget.org/Microsoft.SqlServer.SqlManagementObjects)|v140.17235.0|04/27/18|Cédric L. Charlier |N/A|N/A|
-|[Newtonsoft.Json](https://www.nuget.org/Newtonsoft.Json)|v6.0.8|04/27/18|Cédric L. Charlier |MIT|[](https://github.com/advisories/GHSA-5crp-9r3c-p9vr) (High)|
+|[Newtonsoft.Json](https://www.nuget.org/Newtonsoft.Json)|v6.0.8|04/27/18|Cédric L. Charlier |MIT|[](https://github.com/advisories/GHSA-8rfx-6mr3-5jh3) (High)<br/>[CVE-2024-21907](https://github.com/advisories/GHSA-5crp-9r3c-p9vr) (High)|
 |[Sprache](https://www.nuget.org/Sprache)|v2.1.2|01/22/18|Cédric L. Charlier |MIT|N/A|
 |[System.AppContext](https://www.nuget.org/System.AppContext)|v4.1.0|04/27/18|Cédric L. Charlier |N/A|N/A|
 |[System.Collections](https://www.nuget.org/System.Collections)|v4.0.11|04/27/18|Cédric L. Charlier |N/A|N/A|
@@ -235,4 +239,4 @@ Full tech stack [here](/techstack.md)
 <br/>
 <div align='center'>
 
-Generated via [Stack File](https://github.com/apps/stack-file)
+Generated via [Stack File](https://github.com/marketplace/stack-file)
