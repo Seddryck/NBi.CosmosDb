@@ -1,7 +1,8 @@
 repo_name: Seddryck/NBi.CosmosDb
 report_id: f88adaa1234617302b720be13322cc73
+version: 0.1
 repo_type: Public
-timestamp: '2023-11-12T20:24:28+00:00'
+timestamp: '2024-01-05T08:48:29+00:00'
 requested_by: Seddryck
 provider: github
 branch: master
@@ -17,8 +18,8 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/6755/2c45151a4a11d3a3c8e71bb34dd069d6_400x400.png
-  detection_source_url: NBi.Core.CosmosDb/NBi.Core.CosmosDb.csproj
-  detection_source: NBi.Testing.Core.CosmosDb/NBi.Testing.Core.CosmosDb.csproj
+  detection_source_url: https://github.com/Seddryck/NBi.CosmosDb/blob/master/NBi.Core.CosmosDb/NBi.Core.CosmosDb.csproj
+  detection_source: NBi.Core.CosmosDb/NBi.Core.CosmosDb.csproj
   last_updated_by: Cédric L. Charlier
   last_updated_on: 2018-01-14 16:55:46.000000000 Z
 - name: C#
@@ -30,6 +31,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/1015/1200px-C_Sharp_wordmark.svg.png
+  detection_source_url: https://github.com/Seddryck/NBi.CosmosDb
   detection_source: Repo Metadata
 - name: ".NET"
   description: A free, cross-platform, open source developer platform for building
@@ -41,6 +43,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Frameworks (Full Stack)
   image_url: https://img.stackshare.io/service/1014/IoPy1dce_400x400.png
+  detection_source_url: https://github.com/Seddryck/NBi.CosmosDb/blob/master/NBi.Testing.Core.CosmosDb/packages.config
   detection_source: NBi.Testing.Core.CosmosDb/packages.config
   last_updated_by: Cédric L. Charlier
   last_updated_on: 2018-01-14 16:55:46.000000000 Z
@@ -52,6 +55,7 @@ tools:
   category: Monitoring
   sub_category: Logging Tools
   image_url: https://img.stackshare.io/service/20916/default_6d17162c9963bc83521ee29cf394f349c95173f3.png
+  detection_source_url: https://github.com/Seddryck/NBi.CosmosDb/blob/master/NBi.Testing.Core.CosmosDb/packages.config
   detection_source: NBi.Testing.Core.CosmosDb/packages.config
   last_updated_by: Cédric L. Charlier
   last_updated_on: 2018-01-14 16:55:46.000000000 Z
@@ -63,6 +67,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Version Control System
   image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source_url: https://github.com/Seddryck/NBi.CosmosDb
   detection_source: Repo Metadata
 - name: Moq
   description: The most popular and friendly mocking framework for .NET
@@ -72,6 +77,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Testing Frameworks
   image_url: https://img.stackshare.io/service/1628/1434934.png
+  detection_source_url: https://github.com/Seddryck/NBi.CosmosDb/blob/master/NBi.Testing.Core.CosmosDb/packages.config
   detection_source: NBi.Testing.Core.CosmosDb/packages.config
   last_updated_by: Cédric L. Charlier
   last_updated_on: 2018-01-14 16:55:46.000000000 Z
@@ -83,6 +89,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Testing Frameworks
   image_url: https://img.stackshare.io/service/2371/jZ6MYx5Y_400x400.png
+  detection_source_url: https://github.com/Seddryck/NBi.CosmosDb/blob/master/NBi.Testing.Core.CosmosDb/packages.config
   detection_source: NBi.Testing.Core.CosmosDb/packages.config
   last_updated_by: Cédric L. Charlier
   last_updated_on: 2018-04-27 15:53:05.000000000 Z
@@ -94,6 +101,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Game Development
   image_url: https://img.stackshare.io/service/3173/default_85e419b9c60b158340e534d5006d949015ec16e4.png
+  detection_source_url: https://github.com/Seddryck/NBi.CosmosDb/blob/master/NBi.Testing.Core.CosmosDb/packages.config
   detection_source: NBi.Testing.Core.CosmosDb/packages.config
   last_updated_by: Cédric L. Charlier
   last_updated_on: 2018-04-27 15:53:05.000000000 Z
@@ -105,6 +113,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Package Managers
   image_url: https://img.stackshare.io/service/2637/6I3oEOP4_400x400.jpg
+  detection_source_url: https://github.com/Seddryck/NBi.CosmosDb/blob/master/NBi.Testing.Core.CosmosDb/packages.config
   detection_source: NBi.Testing.Core.CosmosDb/packages.config
   last_updated_by: Cédric L. Charlier
   last_updated_on: 2018-01-14 16:55:46.000000000 Z
@@ -117,7 +126,8 @@ tools:
   category: Build, Test, Deploy
   sub_category: Code Review
   image_url: https://img.stackshare.io/service/20930/default_275fb27c037c57f3394917ebca90dc2465c97ed8.png
-  detection_source: NBi.Testing.Core.CosmosDb/packages.config
+  detection_source_url: https://github.com/Seddryck/NBi.CosmosDb/blob/master/NBi.Core.CosmosDb/packages.config
+  detection_source: NBi.Core.CosmosDb/packages.config
   last_updated_by: Cédric L. Charlier
   last_updated_on: 2018-01-14 16:55:46.000000000 Z
 - name: Visual Studio
@@ -129,6 +139,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Integrated Development Environment
   image_url: https://img.stackshare.io/service/1451/SR2hUhQN.png
+  detection_source_url: https://github.com/Seddryck/NBi.CosmosDb/blob/master/NBi.CosmosDb.sln
   detection_source: NBi.CosmosDb.sln
   last_updated_by: Cédric L. Charlier
   last_updated_on: 2018-01-20 10:49:34.000000000 Z
@@ -141,7 +152,8 @@ tools:
   category: Application Hosting
   sub_category: Cloud Hosting
   image_url: https://img.stackshare.io/service/213/default_88defae415fcb9cd0ac5d36c1ed27e74133c6287.jpg
-  detection_source: NBi.Testing.Core.CosmosDb/packages.config
+  detection_source_url: https://github.com/Seddryck/NBi.CosmosDb/blob/master/NBi.Core.CosmosDb/packages.config
+  detection_source: NBi.Core.CosmosDb/packages.config
   last_updated_by: Cédric L. Charlier
   last_updated_on: 2018-04-27 15:53:05.000000000 Z
 - name: PowerShell
@@ -152,6 +164,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/3681/powershell-logo.png
+  detection_source_url: https://github.com/Seddryck/NBi.CosmosDb
   detection_source: Repo Metadata
 - name: Microsoft.AnalysisServices.AdomdClient
   description: Microsoft.AnalysisServices.AdomdClient.dll file from Microsoft SQL
@@ -163,7 +176,7 @@ tools:
   category: Libraries
   sub_category: NuGet Packages
   image_url: https://img.stackshare.io/package/15479/default_3738187338acc57863a0dd0dda89ecbfed6fcc63.png
-  detection_source_url: NBi.Testing.Core.CosmosDb/packages.config
+  detection_source_url: https://github.com/Seddryck/NBi.CosmosDb/blob/master/NBi.Testing.Core.CosmosDb/packages.config
   detection_source: NBi.Testing.Core.CosmosDb/packages.config
   last_updated_by: Cédric L. Charlier
   last_updated_on: 2018-04-27 15:53:05.000000000 Z
@@ -177,8 +190,8 @@ tools:
   category: Libraries
   sub_category: NuGet Packages
   image_url: https://img.stackshare.io/package/13231/default_44258eb565a346d4baf5243c0df2a219253fec1a.png
-  detection_source_url: NBi.Core.CosmosDb/packages.config
-  detection_source: NBi.Testing.Core.CosmosDb/packages.config
+  detection_source_url: https://github.com/Seddryck/NBi.CosmosDb/blob/master/NBi.Core.CosmosDb/packages.config
+  detection_source: NBi.Core.CosmosDb/packages.config
   last_updated_by: Cédric L. Charlier
   last_updated_on: 2018-04-27 15:53:05.000000000 Z
 - name: Microsoft.CSharp
@@ -192,7 +205,7 @@ tools:
   category: Libraries
   sub_category: NuGet Packages
   image_url: https://img.stackshare.io/package/12845/default_ccf90b566c21ad9eaa59733f297e535ea39fb3b4.png
-  detection_source_url: NBi.Core.CosmosDb/packages.config
+  detection_source_url: https://github.com/Seddryck/NBi.CosmosDb/blob/master/NBi.Core.CosmosDb/packages.config
   detection_source: NBi.Core.CosmosDb/packages.config
   last_updated_by: Cédric L. Charlier
   last_updated_on: 2018-04-27 15:53:05.000000000 Z
@@ -206,8 +219,8 @@ tools:
   category: Libraries
   sub_category: NuGet Packages
   image_url: https://img.stackshare.io/package/13342/default_a8c5a9d917d12544e0591a4182335d690601b375.png
-  detection_source_url: NBi.Core.CosmosDb/packages.config
-  detection_source: NBi.Testing.Core.CosmosDb/packages.config
+  detection_source_url: https://github.com/Seddryck/NBi.CosmosDb/blob/master/NBi.Core.CosmosDb/packages.config
+  detection_source: NBi.Core.CosmosDb/packages.config
   last_updated_by: Cédric L. Charlier
   last_updated_on: 2018-04-27 15:53:05.000000000 Z
 - name: Microsoft.CodeAnalysis.CSharp
@@ -220,8 +233,8 @@ tools:
   category: Libraries
   sub_category: NuGet Packages
   image_url: https://img.stackshare.io/package/12967/default_bd8397841d0aa5de035298a9130ee2dc9d9b0ece.png
-  detection_source_url: NBi.Core.CosmosDb/packages.config
-  detection_source: NBi.Testing.Core.CosmosDb/packages.config
+  detection_source_url: https://github.com/Seddryck/NBi.CosmosDb/blob/master/NBi.Core.CosmosDb/packages.config
+  detection_source: NBi.Core.CosmosDb/packages.config
   last_updated_by: Cédric L. Charlier
   last_updated_on: 2018-04-27 15:53:05.000000000 Z
 - name: Microsoft.CodeAnalysis.Common
@@ -234,8 +247,8 @@ tools:
   category: Libraries
   sub_category: NuGet Packages
   image_url: https://img.stackshare.io/package/13243/default_d2db5a200c4fe2d08cbdb2174cc230708973870b.png
-  detection_source_url: NBi.Core.CosmosDb/packages.config
-  detection_source: NBi.Testing.Core.CosmosDb/packages.config
+  detection_source_url: https://github.com/Seddryck/NBi.CosmosDb/blob/master/NBi.Core.CosmosDb/packages.config
+  detection_source: NBi.Core.CosmosDb/packages.config
   last_updated_by: Cédric L. Charlier
   last_updated_on: 2018-04-27 15:53:05.000000000 Z
 - name: Microsoft.SqlServer.SqlManagementObjects
@@ -247,7 +260,7 @@ tools:
   category: Libraries
   sub_category: NuGet Packages
   image_url: https://img.stackshare.io/package/13830/default_4ee67dce9c0f5d6ba4c7dfc02ceb6746fd996f32.png
-  detection_source_url: NBi.Testing.Core.CosmosDb/packages.config
+  detection_source_url: https://github.com/Seddryck/NBi.CosmosDb/blob/master/NBi.Testing.Core.CosmosDb/packages.config
   detection_source: NBi.Testing.Core.CosmosDb/packages.config
   last_updated_by: Cédric L. Charlier
   last_updated_on: 2018-04-27 15:53:05.000000000 Z
@@ -261,13 +274,19 @@ tools:
   category: Libraries
   sub_category: NuGet Packages
   image_url: https://img.stackshare.io/package/nuget/image.png
-  detection_source_url: NBi.Core.CosmosDb/packages.config
-  detection_source: NBi.Testing.Core.CosmosDb/packages.config
+  detection_source_url: https://github.com/Seddryck/NBi.CosmosDb/blob/master/NBi.Core.CosmosDb/packages.config
+  detection_source: NBi.Core.CosmosDb/packages.config
   last_updated_by: Cédric L. Charlier
   last_updated_on: 2018-04-27 15:53:05.000000000 Z
   vulnerabilities:
-  - name: Improper Handling of Exceptional Conditions in Newtonsoft.Json
+  - name: 'Duplicate Advisory: Improper Handling of Exceptional Conditions in Newtonsoft.Json'
     cve_id: 
+    cve_url: https://github.com/advisories/GHSA-8rfx-6mr3-5jh3
+    detected_date: Jan 4
+    severity: high
+    first_patched: 13.0.1
+  - name: Improper Handling of Exceptional Conditions in Newtonsoft.Json
+    cve_id: CVE-2024-21907
     cve_url: https://github.com/advisories/GHSA-5crp-9r3c-p9vr
     detected_date: Jun 23
     severity: high
@@ -282,7 +301,7 @@ tools:
   category: Libraries
   sub_category: NuGet Packages
   image_url: https://img.stackshare.io/package/13233/default_cadeaa4a9968284dcd1223273394c410c31c9d09.png
-  detection_source_url: NBi.Testing.Core.CosmosDb/packages.config
+  detection_source_url: https://github.com/Seddryck/NBi.CosmosDb/blob/master/NBi.Testing.Core.CosmosDb/packages.config
   detection_source: NBi.Testing.Core.CosmosDb/packages.config
   last_updated_by: Cédric L. Charlier
   last_updated_on: 2018-01-22 14:30:07.000000000 Z
@@ -296,8 +315,8 @@ tools:
   category: Libraries
   sub_category: NuGet Packages
   image_url: https://img.stackshare.io/package/13144/default_a5e8cd728170fc92850284a53a17ff7deb73f318.png
-  detection_source_url: NBi.Core.CosmosDb/packages.config
-  detection_source: NBi.Testing.Core.CosmosDb/packages.config
+  detection_source_url: https://github.com/Seddryck/NBi.CosmosDb/blob/master/NBi.Core.CosmosDb/packages.config
+  detection_source: NBi.Core.CosmosDb/packages.config
   last_updated_by: Cédric L. Charlier
   last_updated_on: 2018-04-27 15:53:05.000000000 Z
 - name: System.Collections
@@ -309,8 +328,8 @@ tools:
   category: Libraries
   sub_category: NuGet Packages
   image_url: https://img.stackshare.io/package/12855/default_4e8402857d2ce7356903ee7422d9b4a0f23cc137.png
-  detection_source_url: NBi.Core.CosmosDb/packages.config
-  detection_source: NBi.Testing.Core.CosmosDb/packages.config
+  detection_source_url: https://github.com/Seddryck/NBi.CosmosDb/blob/master/NBi.Core.CosmosDb/packages.config
+  detection_source: NBi.Core.CosmosDb/packages.config
   last_updated_by: Cédric L. Charlier
   last_updated_on: 2018-04-27 15:53:05.000000000 Z
 - name: System.Collections.Concurrent
@@ -324,8 +343,8 @@ tools:
   category: Libraries
   sub_category: NuGet Packages
   image_url: https://img.stackshare.io/package/12925/default_2aeaea161c566d1abfbaf3f2206fda12b1eea9cd.png
-  detection_source_url: NBi.Core.CosmosDb/packages.config
-  detection_source: NBi.Testing.Core.CosmosDb/packages.config
+  detection_source_url: https://github.com/Seddryck/NBi.CosmosDb/blob/master/NBi.Core.CosmosDb/packages.config
+  detection_source: NBi.Core.CosmosDb/packages.config
   last_updated_by: Cédric L. Charlier
   last_updated_on: 2018-04-27 15:53:05.000000000 Z
 - name: System.Collections.Immutable
@@ -339,8 +358,8 @@ tools:
   category: Libraries
   sub_category: NuGet Packages
   image_url: https://img.stackshare.io/package/12881/default_d56a77cbb06d3dae6daef9669108e3e01d2494af.png
-  detection_source_url: NBi.Core.CosmosDb/packages.config
-  detection_source: NBi.Testing.Core.CosmosDb/packages.config
+  detection_source_url: https://github.com/Seddryck/NBi.CosmosDb/blob/master/NBi.Core.CosmosDb/packages.config
+  detection_source: NBi.Core.CosmosDb/packages.config
   last_updated_by: Cédric L. Charlier
   last_updated_on: 2018-04-27 15:53:05.000000000 Z
 - name: System.Console
@@ -353,8 +372,8 @@ tools:
   category: Libraries
   sub_category: NuGet Packages
   image_url: https://img.stackshare.io/package/12992/default_971bb108ce002c2032e407a9046135e1542c46c7.png
-  detection_source_url: NBi.Core.CosmosDb/packages.config
-  detection_source: NBi.Testing.Core.CosmosDb/packages.config
+  detection_source_url: https://github.com/Seddryck/NBi.CosmosDb/blob/master/NBi.Core.CosmosDb/packages.config
+  detection_source: NBi.Core.CosmosDb/packages.config
   last_updated_by: Cédric L. Charlier
   last_updated_on: 2018-04-27 15:53:05.000000000 Z
 - name: System.Diagnostics.Debug
@@ -367,8 +386,8 @@ tools:
   category: Libraries
   sub_category: NuGet Packages
   image_url: https://img.stackshare.io/package/12887/default_e43fb8cd51d87352a1197706afa527de5c3baecd.png
-  detection_source_url: NBi.Core.CosmosDb/packages.config
-  detection_source: NBi.Testing.Core.CosmosDb/packages.config
+  detection_source_url: https://github.com/Seddryck/NBi.CosmosDb/blob/master/NBi.Core.CosmosDb/packages.config
+  detection_source: NBi.Core.CosmosDb/packages.config
   last_updated_by: Cédric L. Charlier
   last_updated_on: 2018-04-27 15:53:05.000000000 Z
 - name: System.Diagnostics.FileVersionInfo
@@ -381,8 +400,8 @@ tools:
   category: Libraries
   sub_category: NuGet Packages
   image_url: https://img.stackshare.io/package/13345/default_9a849f196ca7930b27f663ae8f15c937ea1b49e5.png
-  detection_source_url: NBi.Core.CosmosDb/packages.config
-  detection_source: NBi.Testing.Core.CosmosDb/packages.config
+  detection_source_url: https://github.com/Seddryck/NBi.CosmosDb/blob/master/NBi.Core.CosmosDb/packages.config
+  detection_source: NBi.Core.CosmosDb/packages.config
   last_updated_by: Cédric L. Charlier
   last_updated_on: 2018-04-27 15:53:05.000000000 Z
 - name: System.Diagnostics.StackTrace
@@ -395,8 +414,8 @@ tools:
   category: Libraries
   sub_category: NuGet Packages
   image_url: https://img.stackshare.io/package/13195/default_7bf60c4b32af3c8741e8825972e95cdf35308a6a.png
-  detection_source_url: NBi.Core.CosmosDb/packages.config
-  detection_source: NBi.Testing.Core.CosmosDb/packages.config
+  detection_source_url: https://github.com/Seddryck/NBi.CosmosDb/blob/master/NBi.Core.CosmosDb/packages.config
+  detection_source: NBi.Core.CosmosDb/packages.config
   last_updated_by: Cédric L. Charlier
   last_updated_on: 2018-04-27 15:53:05.000000000 Z
 - name: System.Diagnostics.Tools
@@ -409,8 +428,8 @@ tools:
   category: Libraries
   sub_category: NuGet Packages
   image_url: https://img.stackshare.io/package/12946/default_3bbc310dbe28a83b0e799743dc3f0afaa77665c9.png
-  detection_source_url: NBi.Core.CosmosDb/packages.config
-  detection_source: NBi.Testing.Core.CosmosDb/packages.config
+  detection_source_url: https://github.com/Seddryck/NBi.CosmosDb/blob/master/NBi.Core.CosmosDb/packages.config
+  detection_source: NBi.Core.CosmosDb/packages.config
   last_updated_by: Cédric L. Charlier
   last_updated_on: 2018-04-27 15:53:05.000000000 Z
 - name: System.Dynamic.Runtime
@@ -422,8 +441,8 @@ tools:
   category: Libraries
   sub_category: NuGet Packages
   image_url: https://img.stackshare.io/package/12921/default_2aeaea161c566d1abfbaf3f2206fda12b1eea9cd.png
-  detection_source_url: NBi.Core.CosmosDb/packages.config
-  detection_source: NBi.Testing.Core.CosmosDb/packages.config
+  detection_source_url: https://github.com/Seddryck/NBi.CosmosDb/blob/master/NBi.Core.CosmosDb/packages.config
+  detection_source: NBi.Core.CosmosDb/packages.config
   last_updated_by: Cédric L. Charlier
   last_updated_on: 2018-04-27 15:53:05.000000000 Z
 - name: System.Globalization
@@ -435,8 +454,8 @@ tools:
   category: Libraries
   sub_category: NuGet Packages
   image_url: https://img.stackshare.io/package/12895/default_4e8402857d2ce7356903ee7422d9b4a0f23cc137.png
-  detection_source_url: NBi.Core.CosmosDb/packages.config
-  detection_source: NBi.Testing.Core.CosmosDb/packages.config
+  detection_source_url: https://github.com/Seddryck/NBi.CosmosDb/blob/master/NBi.Core.CosmosDb/packages.config
+  detection_source: NBi.Core.CosmosDb/packages.config
   last_updated_by: Cédric L. Charlier
   last_updated_on: 2018-04-27 15:53:05.000000000 Z
 - name: System.IO.FileSystem
@@ -449,8 +468,8 @@ tools:
   category: Libraries
   sub_category: NuGet Packages
   image_url: https://img.stackshare.io/package/12931/default_2aeaea161c566d1abfbaf3f2206fda12b1eea9cd.png
-  detection_source_url: NBi.Core.CosmosDb/packages.config
-  detection_source: NBi.Testing.Core.CosmosDb/packages.config
+  detection_source_url: https://github.com/Seddryck/NBi.CosmosDb/blob/master/NBi.Core.CosmosDb/packages.config
+  detection_source: NBi.Core.CosmosDb/packages.config
   last_updated_by: Cédric L. Charlier
   last_updated_on: 2018-04-27 15:53:05.000000000 Z
 - name: System.IO.FileSystem.Primitives
@@ -462,8 +481,8 @@ tools:
   category: Libraries
   sub_category: NuGet Packages
   image_url: https://img.stackshare.io/package/13111/default_623cfb3f5700f77ec1aadc91de41d13f3aa2ae3d.png
-  detection_source_url: NBi.Core.CosmosDb/packages.config
-  detection_source: NBi.Testing.Core.CosmosDb/packages.config
+  detection_source_url: https://github.com/Seddryck/NBi.CosmosDb/blob/master/NBi.Core.CosmosDb/packages.config
+  detection_source: NBi.Core.CosmosDb/packages.config
   last_updated_by: Cédric L. Charlier
   last_updated_on: 2018-04-27 15:53:05.000000000 Z
 - name: System.Linq
@@ -476,8 +495,8 @@ tools:
   category: Libraries
   sub_category: NuGet Packages
   image_url: https://img.stackshare.io/package/12857/default_ccf90b566c21ad9eaa59733f297e535ea39fb3b4.png
-  detection_source_url: NBi.Core.CosmosDb/packages.config
-  detection_source: NBi.Testing.Core.CosmosDb/packages.config
+  detection_source_url: https://github.com/Seddryck/NBi.CosmosDb/blob/master/NBi.Core.CosmosDb/packages.config
+  detection_source: NBi.Core.CosmosDb/packages.config
   last_updated_by: Cédric L. Charlier
   last_updated_on: 2018-04-27 15:53:05.000000000 Z
 - name: System.Linq.Expressions
@@ -490,8 +509,8 @@ tools:
   category: Libraries
   sub_category: NuGet Packages
   image_url: https://img.stackshare.io/package/12924/default_2aeaea161c566d1abfbaf3f2206fda12b1eea9cd.png
-  detection_source_url: NBi.Core.CosmosDb/packages.config
-  detection_source: NBi.Testing.Core.CosmosDb/packages.config
+  detection_source_url: https://github.com/Seddryck/NBi.CosmosDb/blob/master/NBi.Core.CosmosDb/packages.config
+  detection_source: NBi.Core.CosmosDb/packages.config
   last_updated_by: Cédric L. Charlier
   last_updated_on: 2018-04-27 15:53:05.000000000 Z
 - name: System.Net.Http
@@ -503,8 +522,8 @@ tools:
   category: Libraries
   sub_category: NuGet Packages
   image_url: https://img.stackshare.io/package/12860/default_ccf90b566c21ad9eaa59733f297e535ea39fb3b4.png
-  detection_source_url: NBi.Core.CosmosDb/packages.config
-  detection_source: NBi.Testing.Core.CosmosDb/packages.config
+  detection_source_url: https://github.com/Seddryck/NBi.CosmosDb/blob/master/NBi.Core.CosmosDb/packages.config
+  detection_source: NBi.Core.CosmosDb/packages.config
   last_updated_by: Cédric L. Charlier
   last_updated_on: 2018-04-27 15:53:05.000000000 Z
   vulnerabilities:
@@ -524,8 +543,8 @@ tools:
   category: Libraries
   sub_category: NuGet Packages
   image_url: https://img.stackshare.io/package/12874/default_4b18ad6ce0b5b2bd1dc822207c362ce8e0f74098.png
-  detection_source_url: NBi.Core.CosmosDb/packages.config
-  detection_source: NBi.Testing.Core.CosmosDb/packages.config
+  detection_source_url: https://github.com/Seddryck/NBi.CosmosDb/blob/master/NBi.Core.CosmosDb/packages.config
+  detection_source: NBi.Core.CosmosDb/packages.config
   last_updated_by: Cédric L. Charlier
   last_updated_on: 2018-04-27 15:53:05.000000000 Z
 - name: System.Reflection.Metadata
@@ -538,8 +557,8 @@ tools:
   category: Libraries
   sub_category: NuGet Packages
   image_url: https://img.stackshare.io/package/13093/default_8ec8443385d582f19f93b79f0dcf69f422e58967.png
-  detection_source_url: NBi.Core.CosmosDb/packages.config
-  detection_source: NBi.Testing.Core.CosmosDb/packages.config
+  detection_source_url: https://github.com/Seddryck/NBi.CosmosDb/blob/master/NBi.Core.CosmosDb/packages.config
+  detection_source: NBi.Core.CosmosDb/packages.config
   last_updated_by: Cédric L. Charlier
   last_updated_on: 2018-04-27 15:53:05.000000000 Z
 - name: System.Reflection.Primitives
@@ -551,8 +570,8 @@ tools:
   category: Libraries
   sub_category: NuGet Packages
   image_url: https://img.stackshare.io/package/13006/default_12f7186a6d439da94c192c70c3589768d943782d.png
-  detection_source_url: NBi.Core.CosmosDb/packages.config
-  detection_source: NBi.Testing.Core.CosmosDb/packages.config
+  detection_source_url: https://github.com/Seddryck/NBi.CosmosDb/blob/master/NBi.Core.CosmosDb/packages.config
+  detection_source: NBi.Core.CosmosDb/packages.config
   last_updated_by: Cédric L. Charlier
   last_updated_on: 2018-04-27 15:53:05.000000000 Z
 - name: System.Resources.ResourceManager
@@ -565,8 +584,8 @@ tools:
   category: Libraries
   sub_category: NuGet Packages
   image_url: https://img.stackshare.io/package/12898/default_1763b424d3c06c730dd020813f1a1a6ffb953bc2.png
-  detection_source_url: NBi.Core.CosmosDb/packages.config
-  detection_source: NBi.Testing.Core.CosmosDb/packages.config
+  detection_source_url: https://github.com/Seddryck/NBi.CosmosDb/blob/master/NBi.Core.CosmosDb/packages.config
+  detection_source: NBi.Core.CosmosDb/packages.config
   last_updated_by: Cédric L. Charlier
   last_updated_on: 2018-04-27 15:53:05.000000000 Z
 - name: System.Runtime
@@ -578,8 +597,8 @@ tools:
   category: Libraries
   sub_category: NuGet Packages
   image_url: https://img.stackshare.io/package/12849/default_0f5233770e71818507f2339042e7e61bef904e70.png
-  detection_source_url: NBi.Core.CosmosDb/packages.config
-  detection_source: NBi.Testing.Core.CosmosDb/packages.config
+  detection_source_url: https://github.com/Seddryck/NBi.CosmosDb/blob/master/NBi.Core.CosmosDb/packages.config
+  detection_source: NBi.Core.CosmosDb/packages.config
   last_updated_by: Cédric L. Charlier
   last_updated_on: 2018-04-27 15:53:05.000000000 Z
 - name: System.Runtime.Extensions
@@ -592,8 +611,8 @@ tools:
   category: Libraries
   sub_category: NuGet Packages
   image_url: https://img.stackshare.io/package/12872/default_1763b424d3c06c730dd020813f1a1a6ffb953bc2.png
-  detection_source_url: NBi.Core.CosmosDb/packages.config
-  detection_source: NBi.Testing.Core.CosmosDb/packages.config
+  detection_source_url: https://github.com/Seddryck/NBi.CosmosDb/blob/master/NBi.Core.CosmosDb/packages.config
+  detection_source: NBi.Core.CosmosDb/packages.config
   last_updated_by: Cédric L. Charlier
   last_updated_on: 2018-04-27 15:53:05.000000000 Z
 - name: System.Runtime.Handles
@@ -607,8 +626,8 @@ tools:
   category: Libraries
   sub_category: NuGet Packages
   image_url: https://img.stackshare.io/package/13103/default_9a42ff760d96a634e61dad6d7a7d76e2d1506229.png
-  detection_source_url: NBi.Core.CosmosDb/packages.config
-  detection_source: NBi.Testing.Core.CosmosDb/packages.config
+  detection_source_url: https://github.com/Seddryck/NBi.CosmosDb/blob/master/NBi.Core.CosmosDb/packages.config
+  detection_source: NBi.Core.CosmosDb/packages.config
   last_updated_by: Cédric L. Charlier
   last_updated_on: 2018-04-27 15:53:05.000000000 Z
 - name: System.Runtime.InteropServices
@@ -620,8 +639,8 @@ tools:
   category: Libraries
   sub_category: NuGet Packages
   image_url: https://img.stackshare.io/package/12908/default_2aeaea161c566d1abfbaf3f2206fda12b1eea9cd.png
-  detection_source_url: NBi.Core.CosmosDb/packages.config
-  detection_source: NBi.Testing.Core.CosmosDb/packages.config
+  detection_source_url: https://github.com/Seddryck/NBi.CosmosDb/blob/master/NBi.Core.CosmosDb/packages.config
+  detection_source: NBi.Core.CosmosDb/packages.config
   last_updated_by: Cédric L. Charlier
   last_updated_on: 2018-04-27 15:53:05.000000000 Z
 - name: System.Runtime.Numerics
@@ -635,8 +654,8 @@ tools:
   category: Libraries
   sub_category: NuGet Packages
   image_url: https://img.stackshare.io/package/13039/default_ed36ff3c005af695725e05bb15ea5b1f03de31f3.png
-  detection_source_url: NBi.Core.CosmosDb/packages.config
-  detection_source: NBi.Testing.Core.CosmosDb/packages.config
+  detection_source_url: https://github.com/Seddryck/NBi.CosmosDb/blob/master/NBi.Core.CosmosDb/packages.config
+  detection_source: NBi.Core.CosmosDb/packages.config
   last_updated_by: Cédric L. Charlier
   last_updated_on: 2018-04-27 15:53:05.000000000 Z
 - name: System.Security.Cryptography.Algorithms
@@ -649,8 +668,8 @@ tools:
   category: Libraries
   sub_category: NuGet Packages
   image_url: https://img.stackshare.io/package/12929/default_039376cf26bae25623c106aea6185b89980a1e50.png
-  detection_source_url: NBi.Core.CosmosDb/packages.config
-  detection_source: NBi.Testing.Core.CosmosDb/packages.config
+  detection_source_url: https://github.com/Seddryck/NBi.CosmosDb/blob/master/NBi.Core.CosmosDb/packages.config
+  detection_source: NBi.Core.CosmosDb/packages.config
   last_updated_by: Cédric L. Charlier
   last_updated_on: 2018-04-27 15:53:05.000000000 Z
 - name: System.Security.Cryptography.Encoding
@@ -662,8 +681,8 @@ tools:
   category: Libraries
   sub_category: NuGet Packages
   image_url: https://img.stackshare.io/package/13179/default_42e87535b59c0cd77a89678c1c4ed24abc143f58.png
-  detection_source_url: NBi.Core.CosmosDb/packages.config
-  detection_source: NBi.Testing.Core.CosmosDb/packages.config
+  detection_source_url: https://github.com/Seddryck/NBi.CosmosDb/blob/master/NBi.Core.CosmosDb/packages.config
+  detection_source: NBi.Core.CosmosDb/packages.config
   last_updated_by: Cédric L. Charlier
   last_updated_on: 2018-04-27 15:53:05.000000000 Z
 - name: System.Security.Cryptography.Primitives
@@ -675,8 +694,8 @@ tools:
   category: Libraries
   sub_category: NuGet Packages
   image_url: https://img.stackshare.io/package/13109/default_f0c74e534077001eb65a152707758ce46a2dc970.png
-  detection_source_url: NBi.Core.CosmosDb/packages.config
-  detection_source: NBi.Testing.Core.CosmosDb/packages.config
+  detection_source_url: https://github.com/Seddryck/NBi.CosmosDb/blob/master/NBi.Core.CosmosDb/packages.config
+  detection_source: NBi.Core.CosmosDb/packages.config
   last_updated_by: Cédric L. Charlier
   last_updated_on: 2018-04-27 15:53:05.000000000 Z
 - name: System.Security.Cryptography.X509Certificates
@@ -689,8 +708,8 @@ tools:
   category: Libraries
   sub_category: NuGet Packages
   image_url: https://img.stackshare.io/package/13009/default_aa8a6e377c22dbeff795489a5ab127b1d597b5ed.png
-  detection_source_url: NBi.Core.CosmosDb/packages.config
-  detection_source: NBi.Testing.Core.CosmosDb/packages.config
+  detection_source_url: https://github.com/Seddryck/NBi.CosmosDb/blob/master/NBi.Core.CosmosDb/packages.config
+  detection_source: NBi.Core.CosmosDb/packages.config
   last_updated_by: Cédric L. Charlier
   last_updated_on: 2018-04-27 15:53:05.000000000 Z
 - name: System.Text.Encoding
@@ -703,8 +722,8 @@ tools:
   category: Libraries
   sub_category: NuGet Packages
   image_url: https://img.stackshare.io/package/12933/default_e43fb8cd51d87352a1197706afa527de5c3baecd.png
-  detection_source_url: NBi.Core.CosmosDb/packages.config
-  detection_source: NBi.Testing.Core.CosmosDb/packages.config
+  detection_source_url: https://github.com/Seddryck/NBi.CosmosDb/blob/master/NBi.Core.CosmosDb/packages.config
+  detection_source: NBi.Core.CosmosDb/packages.config
   last_updated_by: Cédric L. Charlier
   last_updated_on: 2018-04-27 15:53:05.000000000 Z
 - name: System.Text.Encoding.CodePages
@@ -718,8 +737,8 @@ tools:
   category: Libraries
   sub_category: NuGet Packages
   image_url: https://img.stackshare.io/package/12953/default_e7f4dfb8f4634d3de09f6ace4c8d9767d3189c61.png
-  detection_source_url: NBi.Core.CosmosDb/packages.config
-  detection_source: NBi.Testing.Core.CosmosDb/packages.config
+  detection_source_url: https://github.com/Seddryck/NBi.CosmosDb/blob/master/NBi.Core.CosmosDb/packages.config
+  detection_source: NBi.Core.CosmosDb/packages.config
   last_updated_by: Cédric L. Charlier
   last_updated_on: 2018-04-27 15:53:05.000000000 Z
 - name: System.Text.Encoding.Extensions
@@ -732,8 +751,8 @@ tools:
   category: Libraries
   sub_category: NuGet Packages
   image_url: https://img.stackshare.io/package/12973/default_3bbc310dbe28a83b0e799743dc3f0afaa77665c9.png
-  detection_source_url: NBi.Core.CosmosDb/packages.config
-  detection_source: NBi.Testing.Core.CosmosDb/packages.config
+  detection_source_url: https://github.com/Seddryck/NBi.CosmosDb/blob/master/NBi.Core.CosmosDb/packages.config
+  detection_source: NBi.Core.CosmosDb/packages.config
   last_updated_by: Cédric L. Charlier
   last_updated_on: 2018-04-27 15:53:05.000000000 Z
 - name: System.Threading
@@ -746,8 +765,8 @@ tools:
   category: Libraries
   sub_category: NuGet Packages
   image_url: https://img.stackshare.io/package/12861/default_3ee9e3bfd65cbae9db28ab78b712a58bcd81af27.png
-  detection_source_url: NBi.Core.CosmosDb/packages.config
-  detection_source: NBi.Testing.Core.CosmosDb/packages.config
+  detection_source_url: https://github.com/Seddryck/NBi.CosmosDb/blob/master/NBi.Core.CosmosDb/packages.config
+  detection_source: NBi.Core.CosmosDb/packages.config
   last_updated_by: Cédric L. Charlier
   last_updated_on: 2018-04-27 15:53:05.000000000 Z
 - name: System.Threading.Tasks
@@ -760,8 +779,8 @@ tools:
   category: Libraries
   sub_category: NuGet Packages
   image_url: https://img.stackshare.io/package/12899/default_4b18ad6ce0b5b2bd1dc822207c362ce8e0f74098.png
-  detection_source_url: NBi.Core.CosmosDb/packages.config
-  detection_source: NBi.Testing.Core.CosmosDb/packages.config
+  detection_source_url: https://github.com/Seddryck/NBi.CosmosDb/blob/master/NBi.Core.CosmosDb/packages.config
+  detection_source: NBi.Core.CosmosDb/packages.config
   last_updated_by: Cédric L. Charlier
   last_updated_on: 2018-04-27 15:53:05.000000000 Z
 - name: System.Threading.Tasks.Extensions
@@ -774,7 +793,7 @@ tools:
   category: Libraries
   sub_category: NuGet Packages
   image_url: https://img.stackshare.io/package/12998/default_aa8a6e377c22dbeff795489a5ab127b1d597b5ed.png
-  detection_source_url: NBi.Testing.Core.CosmosDb/packages.config
+  detection_source_url: https://github.com/Seddryck/NBi.CosmosDb/blob/master/NBi.Testing.Core.CosmosDb/packages.config
   detection_source: NBi.Testing.Core.CosmosDb/packages.config
   last_updated_by: Cédric L. Charlier
   last_updated_on: 2018-04-27 15:53:05.000000000 Z
@@ -788,8 +807,8 @@ tools:
   category: Libraries
   sub_category: NuGet Packages
   image_url: https://img.stackshare.io/package/13094/default_44f069d4a745c5c788fc8fe5128bd24cacde1aff.png
-  detection_source_url: NBi.Core.CosmosDb/packages.config
-  detection_source: NBi.Testing.Core.CosmosDb/packages.config
+  detection_source_url: https://github.com/Seddryck/NBi.CosmosDb/blob/master/NBi.Core.CosmosDb/packages.config
+  detection_source: NBi.Core.CosmosDb/packages.config
   last_updated_by: Cédric L. Charlier
   last_updated_on: 2018-04-27 15:53:05.000000000 Z
 - name: System.Threading.Thread
@@ -802,8 +821,8 @@ tools:
   category: Libraries
   sub_category: NuGet Packages
   image_url: https://img.stackshare.io/package/12912/default_4e8402857d2ce7356903ee7422d9b4a0f23cc137.png
-  detection_source_url: NBi.Core.CosmosDb/packages.config
-  detection_source: NBi.Testing.Core.CosmosDb/packages.config
+  detection_source_url: https://github.com/Seddryck/NBi.CosmosDb/blob/master/NBi.Core.CosmosDb/packages.config
+  detection_source: NBi.Core.CosmosDb/packages.config
   last_updated_by: Cédric L. Charlier
   last_updated_on: 2018-04-27 15:53:05.000000000 Z
 - name: System.Xml.ReaderWriter
@@ -816,8 +835,8 @@ tools:
   category: Libraries
   sub_category: NuGet Packages
   image_url: https://img.stackshare.io/package/12962/default_bd8397841d0aa5de035298a9130ee2dc9d9b0ece.png
-  detection_source_url: NBi.Core.CosmosDb/packages.config
-  detection_source: NBi.Testing.Core.CosmosDb/packages.config
+  detection_source_url: https://github.com/Seddryck/NBi.CosmosDb/blob/master/NBi.Core.CosmosDb/packages.config
+  detection_source: NBi.Core.CosmosDb/packages.config
   last_updated_by: Cédric L. Charlier
   last_updated_on: 2018-04-27 15:53:05.000000000 Z
 - name: System.Xml.XDocument
@@ -829,8 +848,8 @@ tools:
   category: Libraries
   sub_category: NuGet Packages
   image_url: https://img.stackshare.io/package/12964/default_aa8a6e377c22dbeff795489a5ab127b1d597b5ed.png
-  detection_source_url: NBi.Core.CosmosDb/packages.config
-  detection_source: NBi.Testing.Core.CosmosDb/packages.config
+  detection_source_url: https://github.com/Seddryck/NBi.CosmosDb/blob/master/NBi.Core.CosmosDb/packages.config
+  detection_source: NBi.Core.CosmosDb/packages.config
   last_updated_by: Cédric L. Charlier
   last_updated_on: 2018-04-27 15:53:05.000000000 Z
 - name: System.Xml.XPath
@@ -843,8 +862,8 @@ tools:
   category: Libraries
   sub_category: NuGet Packages
   image_url: https://img.stackshare.io/package/13217/default_44258eb565a346d4baf5243c0df2a219253fec1a.png
-  detection_source_url: NBi.Core.CosmosDb/packages.config
-  detection_source: NBi.Testing.Core.CosmosDb/packages.config
+  detection_source_url: https://github.com/Seddryck/NBi.CosmosDb/blob/master/NBi.Core.CosmosDb/packages.config
+  detection_source: NBi.Core.CosmosDb/packages.config
   last_updated_by: Cédric L. Charlier
   last_updated_on: 2018-04-27 15:53:05.000000000 Z
 - name: System.Xml.XPath.XDocument
@@ -857,8 +876,8 @@ tools:
   category: Libraries
   sub_category: NuGet Packages
   image_url: https://img.stackshare.io/package/13277/default_3b9faa77d26eef0a944d4dab8d562db23059cb72.png
-  detection_source_url: NBi.Core.CosmosDb/packages.config
-  detection_source: NBi.Testing.Core.CosmosDb/packages.config
+  detection_source_url: https://github.com/Seddryck/NBi.CosmosDb/blob/master/NBi.Core.CosmosDb/packages.config
+  detection_source: NBi.Core.CosmosDb/packages.config
   last_updated_by: Cédric L. Charlier
   last_updated_on: 2018-04-27 15:53:05.000000000 Z
 - name: System.Xml.XmlDocument
@@ -870,7 +889,7 @@ tools:
   category: Libraries
   sub_category: NuGet Packages
   image_url: https://img.stackshare.io/package/12972/default_e02156d6ec171e5af5c76a9ed213ad4b70bd92db.png
-  detection_source_url: NBi.Core.CosmosDb/packages.config
-  detection_source: NBi.Testing.Core.CosmosDb/packages.config
+  detection_source_url: https://github.com/Seddryck/NBi.CosmosDb/blob/master/NBi.Core.CosmosDb/packages.config
+  detection_source: NBi.Core.CosmosDb/packages.config
   last_updated_by: Cédric L. Charlier
   last_updated_on: 2018-04-27 15:53:05.000000000 Z
